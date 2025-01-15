@@ -45,8 +45,10 @@ namespace = dynamic-eu
 We can now test and create the source.
 
 After that you have to click on the connections tab and click on the + button then custom and select the source you just create. Define your develop.battle.net credentials.
-After the credentials check, click on Airbyte Connectors and select Snowflake.
+After the credentials check, click on `Airbyte Connectors` and select `Snowflake`.
 Enter your snowflake Credentials and change Authorization Method to Username and Password and enter your Snowflake Password.
 Test the destination. 
-In the next window choose Replicate Source and click on next.
-Set the frequency that you want (not under 1h) and click on Finish & Sync.
+In the next window choose `Replicate Source` and click on next.
+Set the frequency that you want (not under 1h) and click on `Finish & Sync`.
+
+The airbyte pipeline is now create.
