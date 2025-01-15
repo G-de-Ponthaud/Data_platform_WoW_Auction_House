@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+ - name: sources
+   database: wow_auction_house
+   schema: item_auction
+   tables:
+     - name: wow_api

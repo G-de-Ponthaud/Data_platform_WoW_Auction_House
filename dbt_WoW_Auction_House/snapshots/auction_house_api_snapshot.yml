@@ -1,0 +1,9 @@
+snapshots:
+  - name: auction_house_api_snapshot
+    relation: ref('filtered_wow_api')
+    config:
+      database: wow_auction_house
+      unique_key: id
+      strategy: check
+      check_cols: ["bid", "item", "buyout", "quantity", "time_Left"]
+      
