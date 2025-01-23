@@ -1,0 +1,16 @@
+models:
+  - name: deserialisation
+    columns:
+      - name: auction_id
+        tests:
+          - unique
+          - not_null
+      - name: item_id
+        tests:
+          - not_null:
+              config:
+                severity: warn
+          - is_int:
+              config:
+                severity: warn
+
