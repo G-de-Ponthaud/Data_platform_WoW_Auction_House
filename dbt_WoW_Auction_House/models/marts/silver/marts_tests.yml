@@ -1,0 +1,17 @@
+unit_tests:
+  - name: test_cast_values
+    description: Test that the cast_values function works as expected with null values and try_cast wring types
+    model: cast_values
+    given:
+      - input: ref("deserialisation")
+        rows:
+          - {auction_id: 1, bid: 100, item_id: '2200', pet_breed_id: null, pet_level: null, pet_quality_id: null, pet_species_id: null, buyout: 1000, quantity: 1, time_left: LONG, histo_datetime: 2025-01-16 17:22:42-0}
+          - {auction_id: 2, bid: 100, item_id: string_test, pet_breed_id: '13', pet_level: '1', pet_quality_id: '3', pet_species_id: '4464', buyout: 2000, quantity: 1, time_left: SHORT, histo_datetime: 2025-01-16 17:22:42-0}
+          - {auction_id: 3, bid: 4000, item_id: '83800', pet_breed_id: '13', pet_level: '1', pet_quality_id: '3', pet_species_id: '4464', buyout: null, quantity: 1, time_left: MEDIUM, histo_datetime: 2025-01-16 17:22:42-0}
+          - {auction_id: 4, bid: null, item_id: '83800', pet_breed_id: 'string_test', pet_level: '1', pet_quality_id: '3', pet_species_id: '4464', buyout: 2000, quantity: 1, time_left: SHORT, histo_datetime: 2025-01-16 17:22:42-0}
+    expect:
+      rows:
+        - {auction_id: 1, bid: 100, item_id: 2200, pet_breed_id: null, pet_level: null, pet_quality_id: null, pet_species_id: null, buyout: 1000, quantity: 1, time_left: LONG, histo_datetime: 2025-01-16 17:22:42-0}
+        - {auction_id: 2, bid: 100, item_id: error, pet_breed_id: 13, pet_level: 1, pet_quality_id: 3, pet_species_id: 4464, buyout: 2000, quantity: 1, time_left: SHORT, histo_datetime: 2025-01-16 17:22:42-0}
+        - {auction_id: 3, bid: 4000, item_id: 83800, pet_breed_id: 13, pet_level: 1, pet_quality_id: 3, pet_species_id: 4464, buyout: error, quantity: 1, time_left: MEDIUM, histo_datetime: 2025-01-16 17:22:42-0}
+        - {auction_id: 4, bid: null, item_id: 83800, pet_breed_id: error, pet_level: 1, pet_quality_id: 3, pet_species_id: 4464, buyout: 2000, quantity: 1, time_left: SHORT, histo_datetime: 2025-01-16 17:22:42-0}
