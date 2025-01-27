@@ -3,7 +3,7 @@
     get_data as (
         SELECT  *,
         NULL as error_columns
-        FROM {{ ref("deserialisation") }}
+        FROM {{ ref("deserialization") }}
     ),
     test_values as (
         SELECT
