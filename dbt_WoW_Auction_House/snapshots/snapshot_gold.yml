@@ -1,0 +1,15 @@
+snapshots:
+  - name: g_pet_split_snapshot
+    relation: ref('pet_split')
+    config:
+      database: wow_auction_house
+      unique_key: pet_id
+      strategy: check
+      check_cols: ["pet_breed_id", "pet_level", "pet_quality_id","pet_species_id"]
+  - name: g_auction_split_snapshot
+    relation: ref('auction_split')
+    config:
+      database: wow_auction_house
+      unique_key: auction_id
+      strategy: check
+      check_cols: ["bid", "buyout", "quantity", "time_left", "item_id","pet_id"]      
