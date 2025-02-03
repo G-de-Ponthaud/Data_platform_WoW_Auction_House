@@ -3,7 +3,7 @@ Small data platform that take auction form the Wow API and make an history of cl
 
 # 1- Requirements
 For this project, we will use the following tools :
-  - Arbyte
+  - Airbyte
   - Snowflake
   - dbt
   - Airflow
