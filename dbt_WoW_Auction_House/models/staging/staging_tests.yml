@@ -1,5 +1,5 @@
 models:
-  - name: deserialisation
+  - name: deserialization
     columns:
       - name: auction_id
         tests:
