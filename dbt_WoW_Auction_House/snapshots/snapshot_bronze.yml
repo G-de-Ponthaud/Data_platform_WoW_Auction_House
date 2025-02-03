@@ -6,3 +6,4 @@ snapshots:
       unique_key: id
       strategy: check
       check_cols: ["bid", "item", "buyout", "quantity", "time_Left"]
+      hard_deletes: invalidate

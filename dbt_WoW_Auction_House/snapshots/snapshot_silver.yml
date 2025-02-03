@@ -6,4 +6,5 @@ snapshots:
       unique_key: auction_id
       strategy: check
       check_cols: ["item_id", "bid", "buyout", "quantity", "time_left", "pet_breed_id", "pet_level", "pet_quality_id","pet_species_id"]
+      hard_deletes: invalidate
       
