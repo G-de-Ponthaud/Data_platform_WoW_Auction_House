@@ -86,6 +86,6 @@ You can now run the commands to launch airflow with :
     airflow webserver --port 8080
     airflow scheduler
 
-Once you are log in using the credential of the airflow user we created before (admin / admin), you car create a connexion to your snowflake account and create variables to pass the different credentials to your executions.
+Once you are log in using the credential of the airflow user we created before (admin / admin), you car create a connexion to your snowflake account and create variables to pass the different credentials needed to your executions (snowflake and battle.net apis).
 
 You have now to create the different dags and let them run.
