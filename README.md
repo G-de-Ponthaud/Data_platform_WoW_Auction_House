@@ -19,7 +19,7 @@ For dbt, you will need to execute the command:
 
 Finally, Airflow can be installed using the commands:
 
-    pip install airflow
+    pip install apache-airflow
     pip install apache-airflow-providers-snowflake
 
 Additionally, you will need to create a Snowflake instance. This can be done by using the [free trial version](https://signup.snowflake.com/) available for 30 days (no credit card required).
